@@ -1,15 +1,5 @@
-import Navbar from "./Navbar"
-import ProductsList from "./ProductsList"
-
 function App() {
-
-  return (
-<div>
-  <Navbar />
-  <ProductsList />
-</div>
-
-  )
+  return;
 }
 
-export default App
+export default App;
