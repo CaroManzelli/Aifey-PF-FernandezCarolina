@@ -1,72 +1,39 @@
 import CartWidget from "../common/CartWidget";
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-
 import "./Navbar.css";
+import { Link, Outlet } from "react-router-dom";
+import * as React from "react";
+
 const Navbar = () => {
   return (
     <div>
-      <Box
-        sx={{
-          flexGrow: 1,
-        }}
-      >
-        <AppBar position="static" xs={12}>
-          <Toolbar
-            sx={{
-              backgroundColor: "secondary.light",
-              "&:hover": {
-                backgroundColor: "secondary.dark",
-              },
-            }}
-          >
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Aifey{" "}
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            >
-              Sobre Nosotros
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              component="div"
-              sx={{ flexGrow: 1 }}
-              xs={1}
-            >
-              Productos
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            >
-              Preguntas Frecuentes
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            >
-              Contacto
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            >
-              <CartWidget />{" "}
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </Box>
+      <div className={"containerNavbar"}>
+        <Link to="/">
+          {" "}
+          <img
+            src="https://res.cloudinary.com/dtkr8ubqa/image/upload/v1688911652/samples/aifey/aifey_yorode.png"
+            alt=""
+          />
+        </Link>
+
+        <ul className="categories">
+          <Link to="/">
+            <h2>Todos los Productos</h2>
+          </Link>
+          <Link to="/category/anillos">
+            <h2>Anillos</h2>
+          </Link>
+          <Link to="/category/aritos">
+            <h2>Aritos</h2>
+          </Link>
+          <Link to="/category/collares">
+            <h2>Collares</h2>
+          </Link>
+        </ul>
+        <div className="CartWidget">
+          <CartWidget />
+        </div>
+      </div>
+      <Outlet />
     </div>
   );
 };

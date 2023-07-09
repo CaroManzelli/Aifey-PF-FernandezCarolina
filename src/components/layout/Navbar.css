@@ -1,0 +1,28 @@
+.containerNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fad6a8;
+  max-width: 100%;
+}
+
+.containerNavbar img {
+  height: 100%;
+  width: auto;
+}
+.categories {
+  display: inline-flex;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.categories a {
+  padding: 2rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.CartWidget {
+  margin-right: 2rem;
+}
