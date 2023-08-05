@@ -29,9 +29,11 @@ const Navbar = () => {
             <h2>Collares</h2>
           </Link>
         </ul>
-        <div className="CartWidget">
-          <CartWidget />
-        </div>
+        <Link to="/cart">
+          <div className="CartWidget">
+            <CartWidget />
+          </div>
+        </Link>
       </div>
       <Outlet />
     </div>

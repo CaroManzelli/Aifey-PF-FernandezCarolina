@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import CounterContainer from "../../../common/counter/CounterContainer";
+import CounterContainer from "../../common/counter/CounterContainer";
 
 const ItemDetail = ({ product, agregarAlCarrito }) => {
   return (
